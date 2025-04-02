@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      veil_0: -4232099681307144320
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

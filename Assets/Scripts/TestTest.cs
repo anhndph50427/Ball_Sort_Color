@@ -19,28 +19,34 @@ public class TestTest : MonoBehaviour
 
     private void Start()
     {
-        GenerateBalls(); 
+        GenerateBalls();
+        CameraSize();
     }
 
     private void Update()
     {
-        // gọi hàm khi ấn chuọt
-        if (Input.GetMouseButtonDown(0))
+        // gọi hàm khi ấn 
+        if (Input.touchCount > 0)
         {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
-            RaycastHit2D x = Physics2D.Raycast(mousePosition, Vector2.zero); 
-
-            if (x.collider != null) 
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began)
             {
-                for (int i = 0; i < numTubes.Length; i++)
+                Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                RaycastHit2D x = Physics2D.Raycast(mousePosition, Vector2.zero);
+
+                if (x.collider != null)
                 {
-                    if (x.collider.gameObject == numTubes[i]) 
+                    for (int i = 0; i < numTubes.Length; i++)
                     {
-                        ClickTube(i);
-                        break;
+                        if (x.collider.gameObject == numTubes[i])
+                        {
+                            ClickTube(i);
+                            break;
+                        }
                     }
                 }
             }
+            
         }
         CheckWin();
     }
@@ -156,7 +162,7 @@ public class TestTest : MonoBehaviour
         yield return MoveOverTime(ball, upPos, moveTime);
         yield return MoveOverTime(ball, targetPos, moveTime);
         yield return MoveOverTime(ball, finalPos, moveTime);
-        MoveBall(tubeA, tubeB);
+        //MoveBall(tubeA, tubeB);
     }
 
     // hàm nội suy di chuyển
@@ -217,8 +223,24 @@ public class TestTest : MonoBehaviour
         winMenu.SetActive(true); 
     }
 
-   
-    
-        
-    
+
+    void CameraSize()
+    {
+        float targetAspect = 16f / 9f;  // Tỷ lệ khung hình mong muốn
+        float windowAspect = (float)Screen.width / Screen.height;
+        float scaleHeight = windowAspect / targetAspect;
+
+        Camera cam = Camera.main;
+        if (scaleHeight < 1.0f)
+        {
+            cam.orthographicSize = 5.0f / scaleHeight; // Điều chỉnh theo chiều cao
+        }
+        else
+        {
+            cam.orthographicSize = 5.0f; // Giữ kích thước chuẩn
+        }
+    }
+
+
+
 }

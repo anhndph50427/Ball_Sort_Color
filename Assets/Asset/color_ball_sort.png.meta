@@ -897,7 +897,38 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      color_ball_sort_0: 6652997496193927450
+      color_ball_sort_1: 2172298870574144527
+      color_ball_sort_10: 293485398319722062
+      color_ball_sort_11: -2505402446911627490
+      color_ball_sort_12: 3268390874029690789
+      color_ball_sort_13: -5681847778137937311
+      color_ball_sort_14: 7683048309429335153
+      color_ball_sort_15: 8705393175654548656
+      color_ball_sort_16: 5456647790578031270
+      color_ball_sort_17: -3792336868572794224
+      color_ball_sort_18: 5252260713673301907
+      color_ball_sort_19: 1560725542974900629
+      color_ball_sort_2: 6259906278986648034
+      color_ball_sort_20: 6655848332287353291
+      color_ball_sort_21: -1805677556500954398
+      color_ball_sort_22: -2371184780159997264
+      color_ball_sort_23: 1874376686101618100
+      color_ball_sort_24: -6555477452658143867
+      color_ball_sort_25: 3344184649399124052
+      color_ball_sort_26: -4233286852352281816
+      color_ball_sort_27: -558500481925892809
+      color_ball_sort_28: -4433523514672710845
+      color_ball_sort_29: 5859964125060603088
+      color_ball_sort_3: -4898620637784130038
+      color_ball_sort_30: 324049853507411789
+      color_ball_sort_4: 1309032364770087763
+      color_ball_sort_5: -1898511559560892980
+      color_ball_sort_6: -381257326601980667
+      color_ball_sort_7: 1790980806788484133
+      color_ball_sort_8: 1065730643206109055
+      color_ball_sort_9: -5580156123522772427
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
